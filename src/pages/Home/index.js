@@ -1,11 +1,19 @@
 import Banner from "../../components/Banner";
-
-import './home.css'
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import '../../index.css'
 
 function Home() {
     return (
         <>
-        <Banner />
+            <div className="bg-max">
+                <div className="bg-home h-100">
+                    <Header />
+                    <Banner />
+                    <Footer />
+                </div>
+            </div >
+
         </>
 
     )

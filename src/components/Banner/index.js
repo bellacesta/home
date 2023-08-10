@@ -8,8 +8,9 @@ export default function Banner() {
                     <img className="perfil" src="https://uozxpkapjvicsytezmip.supabase.co/storage/v1/object/public/imagens/logo/logo-preta"/>
                     <h5 class="fw-normal text-light mb-3 px-5 mb-5 fw-bold">"Aqui sua felicidade é o nosso compromisso!" </h5>
                     <div class="d-flex gap-3 justify-content-center flex-column px-5">
-                        <BtnCustom text="Montar Cesta Personalizada"/> 
-                         <BtnCustom text="Encomendar Modelo de Cesta"/> 
+                      
+                         <BtnCustom text="Encomendar Cesta Personalizada" link="produtos"/> 
+                         <BtnCustom text="Whatsapp"/> 
                         
                        
                     </div>

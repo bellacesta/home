@@ -1,3 +1,4 @@
+
 export default function Funcionamento() {
     return (
         <>
@@ -18,8 +19,10 @@ export default function Funcionamento() {
                             <li>Finalize o pedido e relaxe enquanto preparamos sua cesta única</li>
                         </ol>
                     </div>
+                      
                 </div>
             </div >
+           
         </>
     )
 }

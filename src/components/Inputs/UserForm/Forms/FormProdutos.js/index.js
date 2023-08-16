@@ -20,111 +20,280 @@ export default function FormProdutos() {
     const zap = `${formValues.ZAP}`
     const address = `${formValues.ADDRESS}`
     const produtos = `${formValues.PRODUTOS}`
+    const mensagem = `${formValues.MENSAGEM}`
+
 
 
 
     return (
         <>
             <div className="container">
-                <form className=" row g-3 mt-5">
+                <form className=" row g-3">
                     {/* Nome da pessoa */}
                     <div class="col-md-6">
-                        <label for="inputEmail4" class="form-label">Nome</label>
+                        <label for="inputEmail4" class="form-label fw-bold fs-5">Nome</label>
                         <input type="text" class="form-control"{...register("NOME", { required: true })} />
                     </div>
                     {/* Zap */}
                     <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Whatsapp</label>
+                        <label for="inputPassword4" class="form-label fw-bold fs-5">Whatsapp</label>
                         <input type="number" class="form-control" {...register("ZAP", { required: true })} />
                     </div>
                     {/* Endereço */}
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Endereço Completo</label>
+                        <label for="inputAddress" class="form-label fw-bold fs-5">Endereço Completo</label>
                         <input type="text" class="form-control" placeholder="Bairro, Cidade, Lotes, Ap" {...register("ADDRESS", { required: true })} />
                     </div>
-                    {/* inicia o check produtos */}
+                    {/* inicia o check SALGADINHOS*/}
                     <div class="col-12">
-
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Salgadinhos:</label>
                         {[
                             'Doritos 300g',
                             'Doritos 55g',
+                            'Ruflles',
+                            'Pringles',
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                       
+                                  
+                                  
+                                  <label class="form-check-label ms-2" for="flexCheckDefault">
+                                    
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+                    {/* inicia o check GULOSEIMAS*/}
+                    <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Doces:</label>
+                        {[
+                            'Machemelon',
+                            ' Finis',
+                            'M&Ms',
                             'Nutella 140g',
                             'Bis 126g',
-                            'Bis Extra 45g',
+                            ' Bis Extra 45g',
                             'Barra de chocolate Lacta',
                             'Barra de chocolate Nestlé ',
                             'Barra de chocolate Garoto',
                             'Kit kat',
                             'Caixa de bombom Lacta',
-                            'Caixa de bombom Nestlé ',
-                            'Caixa de bombom Garoto ',
-                            'Ferrero Rocher 8unid',
-                            'Ferrero Rocher 3unid',
-                            'Suco one Uva 300ml',
-                            'Suco one laranja 300ml',
-                            'Suco Aurora 300ml',
-                            'Danone Nestlé',
-                            'Coca-Cola ',
+                            'Caixa de bombom Nestlé',
+                            'Caixa de bombom Garoto',
+                            'Ferrero Rocher 8un',
+                            'Ferrero Rocher 3un',
                             'Bueno Kinder',
-                            'Ouro Branco ',
+                            'Ouro Branco',
                             'Sonho de Valsa',
-                            'Pringles',
-                            'Biscoito Nestlé',
-                            'Amendoin Japonês',
-                            'Amendoin Caramelizado',
-                            'Amendoin sem casca',
-                            'Amendoin verde',
-                            'Torrada',
-                            'Fini',
-                            'Oreo',
-                            'Pepis',
-                            'Geleia',
                             'Barra Nutella',
-                            'Iorgute Alpino',
-                            'Morango',
-                            'Uva',
-                            'Roleta de Amendoins ( 5 sabor)',
-                            'Castanha de caju',
-                            'Ameixa seca',
-                            'Damasco seco',
-                            'Salame',
-                            'Azeitona',
-                            'Peito de Peru',
-                            'Queijo',
-                            'Presunto',
-                            'Pão de queijo',
-                            'Donuts',
-                            'Pões variados',
-                            'Mamão',
-                            'Kiwi',
-                            'Heineken 330ml',
-                            'Corona',
-                            'Red Bull',
-                            'JackDaniels 1L',
-                            'JackDaniels 375ml',
-                            'JackDaniels 50ml',
-                            'Ducoco',
-                            'Vinho Pergola',
-                            'Xícara',
-                            'Taça de vidro',
-                            'Copo de vidro',
-                            'Porta Retrato',
-                            'Flor P',
-                            'Orquídea',
-                            'Balão Personalizado com frase',
-                            'Urso pequeno',
-                            'Arco de Balão',
+                            'Geleia',
+
+
 
                         ].map((descktop) => (
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    {descktop.toLowerCase()}
-                                </label>
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
                             </div>
+
 
                         ))}
 
+                    </div>
+
+                      {/* inicia o check Bebidas*/}
+                      <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Bebidas:</label>
+                        {[
+                           'Iorgute',
+                          'Danone Nestlé', 
+                           'Iorgute Alpino', 
+                           'Suco one Uva 300ml',
+                           'Suco one laranja 300ml',
+                           'Suco Aurora 300ml',
+                           'Coca-Cola', 
+                          ' Heineken 330m',
+                          ' Corona', 
+                           'Red Bull',
+                           'JackDaniels 1L',
+                           'JackDaniels 375ml',
+                           'JackDaniels 50ml',
+                           'Ducoco',
+                           'Vinho Pergola', 
+                           'Itaipava', 
+                           'Budwelser', 
+                          ' Stella Artois', 
+                           'Elsenbahn', 
+                           'Brahma',
+                           'Império', 
+                           'Bohemia',
+                           'Pepis',
+
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+
+                      {/* inicia o check Petiscos*/}
+                      <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Petiscos:</label>
+                        {[
+                          'Peito de Peru', 
+                          'Queijo', 
+                          'Presunto', 
+                          'Roleta de Amendoins ( 5 sabor)',
+                          'Castanha de caju', 
+                          'Ameixa seca', 
+                          'Damasco seco',
+                          'Salame', 
+                          'Azeitona ',
+                          'Amendoin Japonês', 
+                          'Amendoin Caramelizado', 
+                          'Amendoin sem casca', 
+                          'Amendoin verde', 
+
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+    {/* inicia o check Petiscos*/}
+    <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Frutas:</label>
+                        {[
+                          'Uva Verde',
+                          'Uva Roxa', 
+                          'Morango', 
+                          'Maçã', 
+                          'Kiwi', 
+                          'Mamão', 
+                          'Banana',
+                          'Ameixa',
+                          'Goiaba', 
+
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+                        {/* inicia o check Pães*/}
+                        <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Pães e Biscoitos:</label>
+                        {[
+                          'Pão de Sal', 
+                          'Pão francês', 
+                          'Pão de forma', 
+                          'Misto', 
+                          'Pão de queijo', 
+                          'Donuts',
+                          'Torrada',
+                          'Bolo', 
+                          'Biscoitinhos', 
+                          'Biscoitinhos bauducco', 
+                          'Biscoitinhos Nestlé', 
+                          'Bicoitinhos de Ninho', 
+                          'Oreo', 
+                          
+
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+                        {/* inicia o check Decoração*/}
+                        <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Decorações:</label>
+                        {[
+                          'Orquídea', 
+                          'Flor Pote 11',
+                          'Flor Pote 5',
+                         ' Porta Retrato', 
+                          'Urso', 
+                          'Balão Personalizado com Frases', 
+                          'Arco de Balão', 
+                          'Xícara', 
+                          'Taça de vidro', 
+                          'Copo de vidro', 
+
+
+
+                        ].map((descktop) => (
+                            <div className="border p-3 mt-2">
+                                <div class="form-check ">
+                                    <input class="form-check-input" type="checkbox" value={descktop.toLowerCase()}  {...register("PRODUTOS")} />
+                                    <label class="form-check-label ms-2" for="flexCheckDefault">
+                                        {descktop.toLowerCase()}
+                                    </label>
+                                </div>
+                            </div>
+
+
+                        ))}
+
+                    </div>
+
+                    <div class="col-12">
+                        <label for="floatingTextarea2" className="fw-bold fs-5">Mensagem Especial (Opcional)</label>
+
+                        <textarea class="form-control" placeholder="Digite uma mensagem especial que deseja colocar na cesta ou em um balão" id="floatingTextarea2" {...register("MENSAGEM")}> </textarea>
                     </div>
                     {/* Butão que abre o modal com as informações e ainda verifica se o formulario foi preenchido */}
 
@@ -152,7 +321,7 @@ export default function FormProdutos() {
                         <Modal.Body>
                             <ul>
                                 <li>Prazo para pedidos 48 horas de antêcendencia.</li>
-                                <li>Formas de Pagamentos creditos, debito, pix e dinheiro.</li>
+                                <li>Formas de Pagamentos crédito, débito, pix e dinheiro.</li>
                                 <li>Só começamos realizar os serviço mediante entrada de 50% do valos total da cesta.</li>
                             </ul>
                         </Modal.Body>
@@ -162,7 +331,8 @@ export default function FormProdutos() {
                                 produtos={produtos}
                                 nome={nome}
                                 zap={zap}
-                                address={address} />
+                                address={address} 
+                                mensagem={mensagem}/>
                         </Modal.Footer>
                     </Modal>
                 </form>

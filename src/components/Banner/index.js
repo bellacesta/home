@@ -10,7 +10,7 @@ export default function Banner() {
                     <div class="d-flex gap-3 justify-content-center flex-column px-5">
                       
                          <BtnCustom text="Encomendar Cesta Personalizada" link="produtos"/> 
-                         <BtnCustom text="Whatsapp"/> 
+                         <BtnCustom text="Whatsapp" link="https://wa.me/message/NKT3WAT5JK2CM1"/> 
                         
                        
                     </div>

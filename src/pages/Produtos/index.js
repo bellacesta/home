@@ -1,9 +1,9 @@
 import CtaCompra from "../../components/CtaCompra/index.js";
-import Footer from "../../components/Footer/index.js";
+import Duvidas from "../../components/Duvidas/index.js";
 import Funcionamento from "../../components/Funcionamento/index.js";
-import FormProdutos from "../../components/Inputs/UserForm/Forms/FormProdutos.js";
 import CtaModalProdutos from "../../components/Modal/CtaModalProdutos/index.js";
 import ProvaSocial from "../../components/ProvaSocial/index.js";
+import Rodape from "../../components/Rodape/index.js";
 import SobreNos from "../../components/SobreNos/index.js";
 import Vantagens from "../../components/Vantagens/index.js";
 
@@ -20,7 +20,7 @@ export default function Produtos() {
                         <p class="lead mb-4 text-light">Surpreenda seus entes queridos com cestas feitas sob medida para cada ocasião.</p>
                         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                             <button type="button" class="btn btn-rosa btn-lg px-4 m-2 gap-3">  <CtaModalProdutos text="Encomendar Agora" /></button>
-                            <button type="button" class="btn btn-rosa btn-lg m-2 px-4">Voltar</button>
+                            <a class="btn btn-rosa btn-lg px-4 m-2 gap-3" href="/home">  Voltar </a>
                         </div>
                     </div>
                 </div>
@@ -36,9 +36,8 @@ export default function Produtos() {
                     <Funcionamento />
                 </section>
                 <ProvaSocial />
-                <section id="cta-section">
-                 
-                </section>
+               <Duvidas/>
+               <Rodape/>
 
         </>
     )
